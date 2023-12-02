@@ -1,0 +1,18 @@
+# variable
+cfg="$HOME/.config"
+wrk="$HOME/Documents/_work"
+krta="$wrk/kairotheia/kairotheia-web-dev"
+wgd="$wrk/wgd/wgd-wev-dev"
+ats="$wrk/ATS_Ananta-Tripilar-Solusi"
+
+# aliases
+alias c='clear'
+alias ll='ls -a'
+alias vi='nvim'
+alias cfg='vi $cfg'
+alias rld='. ~/.bashrc.d/config'
+
+
+
+# ohmyposh
+eval "$(oh-my-posh init bash --config ~/.config/oh-my-posh/themes/stelbent-compact.minimal.omp.json)"
