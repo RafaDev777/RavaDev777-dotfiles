@@ -2,7 +2,7 @@
 cfg="$HOME/.config"
 wrk="$HOME/Documents/_work"
 krta="$wrk/kairotheia/kairotheia-web-dev"
-wgd="$wrk/wgd/wgd-wev-dev"
+wgd="$wrk/wgd/wgd-web-dev"
 ats="$wrk/ATS_Ananta-Tripilar-Solusi"
 
 # aliases
