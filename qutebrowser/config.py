@@ -218,16 +218,17 @@ c.colors.webpage.darkmode.enabled = True
 # Youtube without ads
 config.bind('Z','hint links spawn mpv {hint-url}')
 config.bind('M','hint links spawn kitty mpv --no-video {hint-url}')
-config.bind('X', 'hint links spawn kitty yt-dlp -o "%(title)s" -P "~/Music" --extract-audio --audio-format mp3 --audio-quality 0 {hint-url}')
+# config.bind('X', 'hint links spawn kitty yt-dlp -o "%(title)s" -P "~/Music" --extract-audio --audio-format mp3 --audio-quality 0 {hint-url}')
 
-#Download Audio and no-video
+# Download Audio and no-video
 c.aliases['dl-video'] = 'spawn kitty yt-dlp \
         -o "%(title)s" \
         --parse-metadata "title:%(title)s" \
         --embed-metadata \
         -P "~/Videos" \
         {url}'
-c.aliases['dl-audio'] = 'spawn kitty yt-dlp \
+c.aliases['dl-audio'] = 'spawn kitty -e yt-dlp \
+        -f "bestaudio" \
         -o "%(title)s" \
         --parse-metadata "artist:%(channel)s" \
         --parse-metadata "title:%(title)s" \
@@ -236,3 +237,6 @@ c.aliases['dl-audio'] = 'spawn kitty yt-dlp \
         --extract-audio \
         --audio-format mp3 \
         {url}'
+# Theming
+config.source('themes/default/base16-solarized-dark.config.py')
+

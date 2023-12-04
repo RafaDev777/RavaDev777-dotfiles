@@ -8,13 +8,13 @@ home_dir=(".bashrc.d")
 # Loop through each directories and create link accordingly
 # for .config directories
 for dir in "${cfg_dir[@]}"; do
-	ln -s ~/.dotfiles/"$dir" ~/.config/"$dir"
+	ln -s ~/.dotfiles/"$dir" ~/.config/
 done
 
 #for home directories
 
 for dir in "${home_dir[@]}"; do
-	ln -s ~/.dotfiles/"$dir" ~/"$dir"
+	ln -s ~/.dotfiles/"$dir" ~/
 done
 
 #for files link to home directories
