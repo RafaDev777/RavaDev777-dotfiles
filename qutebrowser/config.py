@@ -237,6 +237,8 @@ c.aliases['dl-audio'] = 'spawn kitty -e yt-dlp \
         --extract-audio \
         --audio-format mp3 \
         {url}'
+
+c.aliases['play'] = 'spawn mpv {url}'
 # Theming
 config.source('themes/default/base16-solarized-dark.config.py')
 
