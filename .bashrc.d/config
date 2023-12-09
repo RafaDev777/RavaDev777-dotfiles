@@ -1,4 +1,5 @@
 # ohmyposh
 # eval "$(oh-my-posh init bash)"
  eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/themes/ravadev777.omp.json)"
+# eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/themes/robbyrussell.omp.json)"
 
