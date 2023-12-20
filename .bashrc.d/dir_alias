@@ -1,0 +1,18 @@
+create_directory_alias() {
+  declare -A directories=(
+  ["cfg"]="$HOME/.config"
+  ["alias"]="$HOME/.bashrc.d/"
+  ["doc"]="$HOME/Documents"
+  ["wrk"]="$HOME/Documents/_work"
+  ["krta"]="$HOME/Documents/_work/kairotheia/kairotheia-web-dev/"
+  ["wgdv"]="$HOME/Documents/_work/wgd_world-graphic-design/wgd-web-dev/"
+  )
+for alias_name in "${!directories[@]}"; do 
+  alias "__$alias_name"="cd '${directories[$alias_name]}' && open"
+  done
+  
+for alias_name in "${!directories[@]}"; do 
+  alias "_$alias_name"="cd '${directories[$alias_name]}'"
+  done
+}
+  create_directory_alias
