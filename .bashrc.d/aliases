@@ -6,7 +6,7 @@ alias i='sudo dnf install'
 alias vi='nvim'
 alias c='clear'
 alias rld='. ~/.bashrc.d/aliases'
-
+alias chk='dnf check-update'
 
 # APP RELATED
 ## Docker
