@@ -3,6 +3,7 @@ create_directory_alias() {
   work_dir="$base_dir/_work"
 
   declare -A directories=(
+  ["dot"]="$HOME/.dotfiles"
   ["cfg"]="$HOME/.config"
   ["alias"]="$HOME/.bashrc.d/"
   ["doc"]="$base_dir"
