@@ -17,3 +17,12 @@ alias stop:docker='sudo systemctl --user stop docker-desktop'
 # Node
 alias pnx='pnpm exec'
 
+# Git
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git pull'
+alias gco='git checkout'
+alias gb='git branch'
+
