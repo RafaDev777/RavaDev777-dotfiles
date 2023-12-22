@@ -11,8 +11,8 @@ create_directory_alias() {
   ["wrk"]="$work_dir"
   ["krta"]="$work_dir/kairotheia/kairotheia-web-dev/"
   ["wgdv"]="$work_dir/wgd_world-graphic-design/wgd-web-dev/"
+  ["ats"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats-web-dev-gatsby/"
   )
-
 # Loop for each alias to go to the directory and open nvim
 for alias_name in "${!directories[@]}"; do 
   alias "__$alias_name"="cd '${directories[$alias_name]}' && open"
