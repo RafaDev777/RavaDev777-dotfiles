@@ -9,7 +9,7 @@ create_directory_alias() {
   ["alias"]="$HOME/.bashrc.d/"
   ["doc"]="$base_dir"
   ["wrk"]="$work_dir"
-  ["krta"]="$work_dir/kairotheia/kairotheia-web-dev/"
+  ["krta"]="$work_dir/kairotheia/krta_web-dev-next-app/"
   ["wgdv"]="$work_dir/wgd_world-graphic-design/wgd-web-dev/"
   ["ats"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats_web-dev-next-app/"
   )
