@@ -11,8 +11,8 @@ alias open='nvim .'
 
 # APP RELATED
 ## Docker
-alias start:docker='sudo systemctl --user start docker-desktop'
-alias stop:docker='sudo systemctl --user stop docker-desktop'
+alias start:docker='systemctl --user start docker-desktop'
+alias stop:docker='systemctl --user stop docker-desktop'
 
 # Node
 alias pnx='pnpm exec'
