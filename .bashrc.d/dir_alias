@@ -9,9 +9,10 @@ create_directory_alias() {
   ["alias"]="$HOME/.bashrc.d/"
   ["doc"]="$base_dir"
   ["wrk"]="$work_dir"
-  ["krta"]="$work_dir/kairotheia/krta_web-dev-next-app/"
-  ["wgdv"]="$work_dir/wgd_world-graphic-design/wgd-web-dev/"
+  ["krta"]="$work_dir/KRTA_kairotheia/krta_web-dev-next-app/"
+  ["wgdv"]="$work_dir/WGD_world-graphic-design/wgd_web-dev/"
   ["ats"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats_web-dev-next-app/"
+  ["atrika"]="$work_dir/ATRIKA_atrika-group/atrika_dashboard-report-web-dev/"
   )
 # Loop for each alias to go to the directory and open nvim
 for alias_name in "${!directories[@]}"; do 
