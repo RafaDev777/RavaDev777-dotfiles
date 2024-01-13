@@ -1,9 +1,7 @@
 vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softabstop=2")
-vim.cmd("set shiftwidth=2")
-
-vim.g.mapleader = " "
+vim.cmd("set tabstop")
+vim.cmd("set softtabstop")
+vim.cmd("set shiftwidth")
 
 vim.opt.wrap = true
 vim.opt.textwidth = 80
