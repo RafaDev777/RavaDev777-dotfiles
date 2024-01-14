@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directories to link in ~/.config/
-cfg_dir=("nvim" "kitty" "qutebrowser" "waybar")
+cfg_dir=("nvim" "kitty" "qutebrowser" "waybar" "tmux")
 home_dir=(".bashrc.d")
 # files=()
 
