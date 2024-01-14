@@ -7,7 +7,6 @@ return {
 		end,
 		keys = {
 			{ "<C-/>", "<cmd>ToggleTerm direction=float<cr>", desc = "Toggle Terminal" },
-			{ "q", "<cmd>ToggleTerm<cr>" },
 		},
 	},
 }
