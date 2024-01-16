@@ -1,8 +1,17 @@
-# ohmyposh
-# eval "$(oh-my-posh init bash)"
- eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/themes/ravadev777.omp.json)"
-
-
 # Sourcing additional configuration
 source "$HOME/.bashrc.d/dir_alias"
 source "$HOME/.bashrc.d/func_alias"
+
+# ohmyposh
+ eval "$(oh-my-posh init bash --config ~/.config/ohmyposh/themes/ravadev777.omp.json)"
+
+# tmux
+# set start up tmux
+if \
+  command -v tmux &> /dev/null \
+  && [ -n "$PS1" ] \
+  && [[ ! "$TERM" =~ screen ]] \
+  && [[ ! "$TERM" =~ tmux ]] \
+  && [ -z "$TMUX" ]; then
+     exec tmux
+fi
