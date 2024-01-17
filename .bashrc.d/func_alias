@@ -23,44 +23,6 @@ alias gl='git pull'
 alias gco='git checkout'
 alias gb='git branch'
 
-# ## Service Management
-# ### Start Service function
-# st() {
-#     case "$1" in
-#       # Docker
-#       docker)
-#         systemctl --user start docker-desktop
-#         ;;
-#       # Minimal Vivaldi
-#       webdev)
-#         if [ -z "$2" ]; then
-#           echo "Usage: start webdev <port>"
-#           return 1
-#         fi
-#         vivaldi --new-window --app="http://localhost:$2"
-#         ;;
-#       *)
-#         echo "Service unknown: $1"
-#         return 1
-#         ;;
-#     esac
-#   }
-#
-# ### Stop Service function
-# sp() {
-#     case $1 in
-#       # Docker
-#       docker)
-#         systemctl --user stop docker-desktop
-#         ;;
-#       *)
-#         echo "Service unknown: $1"
-#         return 1
-#         ;;
-#     esac
-#   }
-#
-## Service Management
 ### Service List
 declare -A services=(
 ["docker_start"]="systemctl --user start docker-desktop"
@@ -90,7 +52,7 @@ stop() {
     fi
   }
 
-# Vivaldi minimal window
+# webde_start function - Vivaldi minimal window
 start-webdev() {
   read -p "Enter port for webdev: " port
 
