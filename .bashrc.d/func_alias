@@ -14,6 +14,15 @@ alias open='nvim .'
 alias start:docker='systemctl --user start docker-desktop'
 alias stop:docker='systemctl --user stop docker-desktop'
 
+## Chromium 
+start:webdev(){
+    if [ -z "$1" ]; then
+      echo "test"
+      return 1
+    fi
+    chromium-browser --new-window --app="http://localhost:$1"
+  }
+
 # Node
 alias pnx='pnpm exec'
 
