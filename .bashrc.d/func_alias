@@ -7,7 +7,7 @@ alias vi='nvim'
 alias c='clear'
 alias rld='. ~/.bashrc.d/config'
 alias chk='dnf check-update'
-alias .='nvim .'
+alias o='nvim .'
 
 # APP RELATED
 
