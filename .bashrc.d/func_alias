@@ -7,21 +7,9 @@ alias vi='nvim'
 alias c='clear'
 alias rld='. ~/.bashrc.d/config'
 alias chk='dnf check-update'
-alias open='nvim .'
+alias .='nvim .'
 
 # APP RELATED
-## Docker
-alias start:docker='systemctl --user start docker-desktop'
-alias stop:docker='systemctl --user stop docker-desktop'
-
-## Chromium 
-start:webdev(){
-    if [ -z "$1" ]; then
-      echo "test"
-      return 1
-    fi
-    chromium-browser --new-window --app="http://localhost:$1"
-  }
 
 # Node
 alias pnx='pnpm exec'
@@ -35,3 +23,39 @@ alias gl='git pull'
 alias gco='git checkout'
 alias gb='git branch'
 
+## Service Management
+### Start Service function
+st() {
+    case "$1" in
+      # Docker
+      docker)
+        systemctl --user start docker-desktop
+        ;;
+      # Minimal Chromium
+      webdev)
+        if [ -z "$2" ]; then
+          echo "Usage: start webdev <port>"
+          return 1
+        fi
+        chromium-browser --new-window --app="http://localhost:$2"
+        ;;
+      *)
+        echo "Service unknown: $1"
+        return 1
+        ;;
+    esac
+  }
+
+### Stop Service function
+sp() {
+    case $1 in
+      # Docker
+      docker)
+        systemctl --user stop docker-desktop
+        ;;
+      *)
+        echo "Service unknown: $1"
+        return 1
+        ;;
+    esac
+  }
