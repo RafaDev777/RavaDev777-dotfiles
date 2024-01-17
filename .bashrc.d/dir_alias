@@ -16,7 +16,7 @@ create_directory_alias() {
   )
 # Loop for each alias to go to the directory and open nvim
 for alias_name in "${!directories[@]}"; do 
-  alias "..$alias_name"="cd '${directories[$alias_name]}' && open"
+  alias "..$alias_name"="cd '${directories[$alias_name]}' && o"
   done
 
 # Loop for each alias to go to the directory only
