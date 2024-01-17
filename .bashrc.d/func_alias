@@ -23,39 +23,81 @@ alias gl='git pull'
 alias gco='git checkout'
 alias gb='git branch'
 
+# ## Service Management
+# ### Start Service function
+# st() {
+#     case "$1" in
+#       # Docker
+#       docker)
+#         systemctl --user start docker-desktop
+#         ;;
+#       # Minimal Vivaldi
+#       webdev)
+#         if [ -z "$2" ]; then
+#           echo "Usage: start webdev <port>"
+#           return 1
+#         fi
+#         vivaldi --new-window --app="http://localhost:$2"
+#         ;;
+#       *)
+#         echo "Service unknown: $1"
+#         return 1
+#         ;;
+#     esac
+#   }
+#
+# ### Stop Service function
+# sp() {
+#     case $1 in
+#       # Docker
+#       docker)
+#         systemctl --user stop docker-desktop
+#         ;;
+#       *)
+#         echo "Service unknown: $1"
+#         return 1
+#         ;;
+#     esac
+#   }
+#
 ## Service Management
-### Start Service function
-st() {
-    case "$1" in
-      # Docker
-      docker)
-        systemctl --user start docker-desktop
-        ;;
-      # Minimal Chromium
-      webdev)
-        if [ -z "$2" ]; then
-          echo "Usage: start webdev <port>"
-          return 1
-        fi
-        chromium-browser --new-window --app="http://localhost:$2"
-        ;;
-      *)
-        echo "Service unknown: $1"
-        return 1
-        ;;
-    esac
+### Service List
+declare -A services=(
+["docker_start"]="systemctl --user start docker-desktop"
+["docker_stop"]="systemctl --user stop docker-desktop"
+["webdev_start"]="start-webdev"
+)
+
+start() {
+    service="$1"
+
+    if [[ -n "${services["${service}_start"]}" ]]; then
+      eval "${services["${service}_start"]}"
+    else
+      echo "Service unknown or missing start command: $service"
+      return 1
+    fi
+  }
+  
+stop() {
+    service="$1"
+
+    if [[ -n "${services["${service}_stop"]}" ]]; then
+      eval "${services["${service}_stop"]}"
+    else
+      echo "No stop command defined fo the service: $service"
+      return 1
+    fi
   }
 
-### Stop Service function
-sp() {
-    case $1 in
-      # Docker
-      docker)
-        systemctl --user stop docker-desktop
-        ;;
-      *)
-        echo "Service unknown: $1"
-        return 1
-        ;;
-    esac
-  }
+# Vivaldi minimal window
+start-webdev() {
+  read -p "Enter port for webdev: " port
+
+  if [ -z "$port" ]; then
+    echo "Usage: start-webdev <port>"
+    return 1
+  fi
+
+  vivaldi --new-window --app="http://localhost:$port"
+}
