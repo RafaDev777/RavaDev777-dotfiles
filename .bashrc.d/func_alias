@@ -28,6 +28,7 @@ declare -A services=(
 ["docker_start"]="systemctl --user start docker-desktop"
 ["docker_stop"]="systemctl --user stop docker-desktop"
 ["webdev_start"]="start-webdev"
+["ohmyposh_update"]="update-ohmyposh"
 )
 
 start() {
@@ -52,6 +53,18 @@ stop() {
     fi
   }
 
+update() {
+    service="$1"
+
+    if [[ -n "${services["${service}_update"]}" ]]; then
+      eval "${services["${service}_update"]}"
+    else
+      echo "No update command defined for the service: $service"
+      return 1
+    fi
+    
+  }
+
 # webde_start function - Vivaldi minimal window
 start-webdev() {
   read -p "Enter port for webdev: " port
@@ -63,3 +76,10 @@ start-webdev() {
 
   vivaldi --new-window --app="http://localhost:$port"
 }
+
+update-ohmyposh() {
+  local install_dir="$HOME/.dotfiles/ohmyposh/bin"
+  local file="oh-my-posh"
+    rm -rf "$install_dir/$file"
+    curl -s https://ohmyposh.dev/install.sh | bash -s -- -d "$install_dir"
+  }
