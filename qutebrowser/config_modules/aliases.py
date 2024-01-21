@@ -24,6 +24,16 @@ c.aliases.update({
 # Play Youtube Video in mpv 
 'play' : 'spawn mpv {url}',
 
+# Address Related Alias
+    # TODO: dynamic alias 
+'!dev': 'open http://localhost:{}',
+'!siakad': 'open siakad.pradita.ac.id',
+'!aswaya': 'open aswaya.pradita.ac.id',
+'!sid': 'open s.id/{query}',
+'!drive': 'open drive.google.com',
+'!gclass': 'open classroom.google.com',
+'!sheet': 'open spreadsheet.google.com',
+'!docs': 'open docs.google.com'
 })
 
 
