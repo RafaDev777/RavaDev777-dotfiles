@@ -186,7 +186,11 @@ c.tabs.show = 'switching'
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}'}
+c.url.searchengines = {
+    'DEFAULT': 'https://www.google.com/search?q={}',
+    'dev':'http://localhost:{}',
+    'sid':'https://s.id/{}',
+}
 
 # Render all web contents using a dark theme. Example configurations
 # from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
@@ -200,6 +204,6 @@ c.url.searchengines = {'DEFAULT': 'https://www.google.com/search?q={}'}
 # - "With increased text contrast": Set
 # `colors.webpage.darkmode.increase_text_contrast` (QtWebEngine 6.3+)
 # Type: Bool
-c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.enabled = True
 
  

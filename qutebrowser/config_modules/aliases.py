@@ -26,14 +26,14 @@ c.aliases.update({
 
 # Address Related Alias
     # TODO: dynamic alias 
-'!dev': 'open http://localhost:{}',
+'!dev': 'open dev',
 '!siakad': 'open siakad.pradita.ac.id',
 '!aswaya': 'open aswaya.pradita.ac.id',
-'!sid': 'open s.id/{query}',
+'!sid': 'open sid',
 '!drive': 'open drive.google.com',
 '!gclass': 'open classroom.google.com',
-'!sheet': 'open spreadsheet.google.com',
-'!docs': 'open docs.google.com'
+'!sheet': 'open gsheet .',
+'!docs': 'open gdocs'
 })
 
 
