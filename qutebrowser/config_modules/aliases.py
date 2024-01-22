@@ -32,8 +32,8 @@ c.aliases.update({
 '!sid': 'open sid',
 '!drive': 'open drive.google.com',
 '!gclass': 'open classroom.google.com',
-'!sheet': 'open gsheet .',
-'!docs': 'open gdocs'
+'!sheet': 'open docs.google.com/spreadsheets/u/0/',
+'!docs': 'open docs.google.com/document/u/0/'
 })
 
 
