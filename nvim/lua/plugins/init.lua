@@ -1,5 +1,5 @@
 return {
-	{ import = "plugins.highlight" },
+	{ import = "plugins.highlights" },
 	{ import = "plugins.ui" },
 	{ import = "plugins.utils" },
 }
