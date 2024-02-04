@@ -11,7 +11,8 @@ create_directory_alias() {
   ["wrk"]="$work_dir"
   ["krta"]="$work_dir/KRTA_kairotheia/krta_web-dev-next-app/"
   ["wgdv"]="$work_dir/WGD_world-graphic-design/wgd_web-dev/"
-  ["ats"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats_web-dev-next-app/"
+  ["ats-next"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats_web-dev-next-app/"
+  ["ats"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats_web-dev-svelte"
   ["atrika"]="$work_dir/ATRIKA_atrika-group/atrika_dashboard-report-web-dev/"
   )
 # Loop for each alias to go to the directory and open nvim
