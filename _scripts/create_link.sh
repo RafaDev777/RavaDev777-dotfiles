@@ -3,7 +3,7 @@
 # Directories to link in ~/.config/
 cfg_dir=("nvim" "kitty" "qutebrowser" "waybar" "tmux")
 home_dir=(".bashrc.d")
-# files=()
+files=(".vimrc")
 
 # Loop through each directories and create link accordingly
 # for .config directories
@@ -19,6 +19,6 @@ done
 
 #for files link to home directories
 
-#for file in "${files[@]}"; do
-#	ln -s ~/.dotfiles/"$file" ~/"$file"
-#done
+for file in "${files[@]}"; do
+	ln -s ~/.dotfiles/"$file" ~/"$file"
+done
