@@ -30,8 +30,8 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 ### Output configuration
 #
 # Default font setting
-#font pango:JetBrainsMono Nerd Font 0
-#font pango:Liberation Serif 10
+# font pango:JetBrainsMono Nerd Font 0
+# font pango:Liberation Serif 10
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg
 output * bg /usr/share/backgrounds/richard-horvath.jpg fill
@@ -88,6 +88,12 @@ exec swayidle -w timeout 0
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
     floating_modifier $mod normal
+
+    # Brightness Control
+    # Increase
+    bindsym XF86MonBrightnessUp exec light -A 10
+    # Decrease
+    bindsym XF86MonBrightnessDown exec light -U 10
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
