@@ -2,6 +2,7 @@
 create_directory_alias() {
   base_dir="$HOME/Documents"
   work_dir="$base_dir/_work"
+  mcr_dir="$work_dir/MCR_masama-creative"
 
   declare -A directories=(
   ["dot"]="$HOME/.dotfiles"
@@ -14,6 +15,8 @@ create_directory_alias() {
   ["ats-next"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats_web-dev-next-app/"
   ["ats"]="$work_dir/ATS_Ananta-Tripilar-Solusi/ats_web-dev-svelte"
   ["atrika"]="$work_dir/ATRIKA_atrika-group/atrika_dashboard-report-web-dev/"
+  ["mcr"]="$work_dir/MCR_masama-creative"
+  ["wip"]="$mcr_dir/resto-template/white-platter-template/"
   )
 # Loop for each alias to go to the directory and open nvim
 for alias_name in "${!directories[@]}"; do 
